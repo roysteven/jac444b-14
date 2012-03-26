@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="dist/lib/appframework-1.0.2.jar" sourcepath="dist/lib/appframework-1.0.2.jar"/>
+	<classpathentry kind="lib" path="dist/lib/swing-layout-1.0.3.jar"/>
+	<classpathentry kind="lib" path="dist/lib/swing-worker-1.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/swing-worker.jar"/>
+	<classpathentry kind="lib" path="dist/lib/swingx-bean.jar"/>
+	<classpathentry kind="lib" path="dist/lib/swingx-ws-2007_10_14.jar"/>
+	<classpathentry kind="lib" path="dist/lib/swingx.jar"/>
+	<classpathentry kind="lib" path="dist/MapApp.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/cobundle/swing-worker.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/cobundle/swingx-bean.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/cobundle/swingx.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/commons-httpclient-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/json.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/jtidy-r7.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/rome-0.8.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/lib/optional/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-2007_10_14-bin/swingx-ws-2007_10_14.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
