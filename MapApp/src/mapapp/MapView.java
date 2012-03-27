@@ -337,6 +337,7 @@ public class MapView extends FrameView {
             gmg.GetAddressInfo();
             jXMapKit1.setAddressLocation(new GeoPosition(gmg.GetLat(),gmg.GetLng()));
             jXMapKit1.setZoom(4);
+            locationList.insertItemAt(saddress, 0);//add by chen jian hui for collecting the data to combox list.2012.03.27
             //gmg.QuitGoogle();//modify by chen jian hui: Don't need to disconnect to google anymore, 
             				   //it automatically disconnect by itself when the task is done well.
         }               
