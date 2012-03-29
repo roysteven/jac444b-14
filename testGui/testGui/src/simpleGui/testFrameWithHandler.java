@@ -118,6 +118,10 @@ public class testFrameWithHandler {
 				//totalPrice
 				//String stemp = "Payed.\n";
 				//outputArea.append(stemp);
+				String s="";
+				s = s.valueOf(totalPrice);
+				String st = "                                         total = $";
+				outputArea.append(st+s+"\n");
 				outputArea.append("************************************************\n");
 				totalPrice = 0.00;
 			}
@@ -130,9 +134,9 @@ public class testFrameWithHandler {
 						+"\n";
 				outputArea.append(s);
 				totalPrice+=dpriceTag[orderState[0]];
-				s = s.valueOf(totalPrice);
-				String st = "                                         total = $";
-				outputArea.append(st+s+"\n");
+				//s = s.valueOf(totalPrice);
+				//String st = "                                         total = $";
+				//outputArea.append(st+s+"\n");
 				//outputArea.append(totalPrice);
 				
 			}
