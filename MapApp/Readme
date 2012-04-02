@@ -1,0 +1,40 @@
+README
+
+1. After creating the JAR files, I've imported the JAR files into Eclipse again. I've checked that there's no compilation error.
+
+2. Instructions of running the application on Eclipse:
+
+  1)Create a Java Project on Eclipse
+     The location is any on the local machine, such as c:\temp\MapApp
+
+  2)Import jar file into this project
+   
+  3)Open the src folder in the project on Eclipse
+
+  4)Find the file MapApp.java in the package "mapapp"
+
+  5)Run MapApp.java (right click --> choose Run as --> choose Java Application )
+
+3. List of jar files 
+    We haven't used third-party Java packages.
+
+4. All original source code are come from
+        http://today.java.net/pub/a/today/2007/10/30/building-maps-into-swing-app-with-jxmapviewer.html
+   Our team works on modifying MapView.java file in order to add new UI components and functions which
+   expand the functions of this project(MapApp).  
+
+   Modify content:
+         UI: 1. Add one drop down list(JComoBox) for quick input location and restore the inputed location as the history inputting history
+              2. Add one text field for inputting location through keyboard
+              3. Add two buttons for zoom in map and zoom out map
+         Function: 1. Get google map through inputting location(Such as "London, UK")
+                        2. Zoom In and Zoom Out
+                        3. Restore the location accessing history into drop down list in JComboBox
+
+5. For the package gglMpsSttcAccessor 
+    - Using the theory of module called Provider.GoogleStatic in APPLICATION1:
+    - Our assignment implements the similar feather getting local information from google static map by using its API with its geocoding interface.
+    - It is base on assignment's special need that it provides an interface to end user to location an address by typing the address in cognitive 
+      address such as "234 holmbush crescent toronto","toronto ca" and so on, instead of the longitude and latitude. So that the end user could
+      locate anywhere he/she want.
+     
