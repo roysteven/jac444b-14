@@ -1,16 +1,15 @@
 package gglMpsSttcAccessor;
-
+/**
+*read data of xml format(jac444 assignment2).
+*@author: Jian hui Chen
+*@version: 1.0
+*@since    1.0
+*/
 //import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.StringReader;
 
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathException;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathFactory;
 
 import org.jdom.Document;
 import org.jdom.Element;
@@ -27,7 +26,10 @@ public class XMLReader {
     Element m_root = null;
     Element   m_readroot = null;
     StringReader m_reader = null;
-
+    /**
+     * Create a XMLReader for xml format stream
+     * @param xmlStream The source string need to be read
+     */
     public XMLReader(String xmlStream)
     {
     	//m_xpath = XPathFactory.newInstance().newXPath();
@@ -46,6 +48,11 @@ public class XMLReader {
 			e.printStackTrace();
 		}
     }
+    /**
+     * Move direct to the last sub root
+     * @param sroot The target root
+     * @param index How depth going
+     */    
     public void SetReadRoot(String sroot,int index){
     	if(!sroot.isEmpty()){
     		if(index==0) m_readroot =m_root;
@@ -76,6 +83,12 @@ public class XMLReader {
     		}
     	}
     }
+    /**
+     * Get value of string
+     * @param XPathString The related path string,like "abs path of computer system."
+     * @return value in that path
+     * @throws XPathException: Exception of wrong path.
+     */    
     public String GetStringValue(String XPathString) throws XPathException
     {
     	SetReadRoot(XPathString,0);
@@ -83,11 +96,23 @@ public class XMLReader {
         return m_readroot.getValue();
 
     }
+    /**
+     * Get value of integer
+     * @param XPathString The related path string,like "abs path of computer system."
+     * @return value in that path
+     * @throws XPathException: Exception of wrong path.
+     */    
     public int GetIntegerValue(String XPathString) throws XPathException
     {
         return Integer.parseInt(GetStringValue(XPathString));
 
     }
+    /**
+     * Get value of double
+     * @param XPathString The related path string,like "abs path of computer system."
+     * @return value in that path
+     * @throws XPathException: Exception of wrong path.
+     */    
     public Double GetDoubleValue(String XPathString) throws XPathException
     {
     	return Double.parseDouble(GetStringValue(XPathString));
