@@ -1,12 +1,15 @@
 package gglMpsSttcAccessor;
-
+/**
+*read data of xml format(jac444 assignment2).
+*@author: Jian hui Chen
+*@version: 1.0
+*@since    1.0
+*/
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpException;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
@@ -36,7 +39,13 @@ public class WebRequest extends HttpClient {
         if (m_ReceiveStream == null) return false;
         return true;
     }*/
-    
+    /**
+     * send a query to google.Connecting to google.
+     * @param strUI The address in detail
+     * @return always true if connecting to internet.
+     * @throws HttpException The Exception of http
+     * @throws IOException The Exception of IO when using http query.
+     */  
     public boolean webRequest(String strUI) throws HttpException, IOException{
     	
     	//get = new GetMethod(strUI);
@@ -80,6 +89,9 @@ public class WebRequest extends HttpClient {
 
         m_ReadStream.Close();
     }*/
+    /**
+     * Disconnect.
+     */    
     public void QuitRequest()
     {
         if (get!=null)

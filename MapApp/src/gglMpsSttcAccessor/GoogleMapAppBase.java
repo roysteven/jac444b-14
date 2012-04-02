@@ -1,5 +1,10 @@
 package gglMpsSttcAccessor;
-
+/**
+*holds the communication info format about the google static API responses.
+*@author: Jian hui Chen
+*@version: 1.0
+*@since    1.0
+*/
 import javax.xml.xpath.XPathException;
 
 public class GoogleMapAppBase extends WebRequest {
@@ -33,7 +38,14 @@ public class GoogleMapAppBase extends WebRequest {
     protected XMLReader m_xmlReader = null;
     protected String m_strStatus = null;
     protected boolean m_bOkeyFlag = false;
-    
+ 
+    /**
+     * Checking the communication if it is successful
+     * note: it must be call by application for prepare to 
+     *      read data from the response stream.
+     * @return If statue say 'ok' return true, otherwise false.
+     * @throws XPathException xml searching path error.
+     */    
     public boolean IsOkey() throws XPathException
     {
         m_xmlReader = new XMLReader(m_ReceiveStream);
@@ -49,7 +61,9 @@ public class GoogleMapAppBase extends WebRequest {
         }
         return m_bOkeyFlag;
     }
-    
+    /**
+     * To disconnect the query if this connecting works on the multi-thread mode.
+     */  
     public void QuitGoogle()
     {
         m_strUI = null;
